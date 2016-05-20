@@ -42,15 +42,15 @@ public class GameTebak extends Frame {
         public void actionPerformed(ActionEvent event) {
             int angka = Integer.parseInt(txtAngka.getText().trim());
             int jawaban = (int) (Math.random() * 10 + 1);
-            int i = 0;
             count++;
             if (angka == jawaban) {
                 JOptionPane.showMessageDialog(null, "Kamu Menang!");
                 count = 0;
-            }
-            else if (count == 3) {
+            } else if (count == 3) {
                 JOptionPane.showMessageDialog(null, "Kamu Kalah! Angka Yang Benar Adalah " + jawaban);
                 count = 0;
+            } else {
+                JOptionPane.showMessageDialog(null, "Jawabanmu Salah!");
             }
         }
     }
