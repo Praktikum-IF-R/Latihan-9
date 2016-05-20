@@ -28,7 +28,6 @@ public class TebakAngka extends Frame {
         public void actionPerformed(ActionEvent event) {
             int angka = Integer.parseInt(txtAngka.getText().trim());
             int tebak = (int) (Math.random() * 10 + 1);
-            int i = 0;
             count++;
             if (angka == tebak) {
                 JOptionPane.showMessageDialog(null, "Anda Menang");
