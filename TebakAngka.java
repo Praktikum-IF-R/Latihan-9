@@ -38,8 +38,8 @@ public class TebakAngka extends Frame {
            if (a == angkarahasia){
                JOptionPane.showMessageDialog(btntebak,"Benar");
            }else {
-               JOptionPane.showMessageDialog(btntebak,"\t\t             Salah\n Jangan Menyerah~");
-               JOptionPane.showMessageDialog(btntebak,"\t\t             Salah\n Jangan Menyerah~");
+               JOptionPane.showMessageDialog(btntebak,"\t\t             Salah");
+               JOptionPane.showMessageDialog(btntebak,"\t\t             Jangan Menyerah sayang~");
            }
         }
     }
