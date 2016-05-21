@@ -48,24 +48,19 @@ public class TebakAngka extends JFrame {
     public class event implements ActionListener{
    
     public void actionPerformed(ActionEvent e){
-        RandomNum = (int)(Math.random()*10+1);
-               
-                try{
-                
-                    Guess=(int)(Double.parseDouble(textfield.getText()));
-                if(Guess==RandomNum){
-                    resultlabel.setText("Kamu menang");
-                                    }
-                else if(Guess!=RandomNum){
-                    resultlabel.setText("Kamu Kalah");
-                }
-                resultlabel.setText("Angka yang dimaksud adalah : "+RandomNum);;
-               
-                }
-                catch(Exception ex){
-                randomlabel.setText("Tolong inputkan angka saja ");
-                }
-               
-       
-                   }}}
-
+       int angka = Integer.parseInt(textfield.getText().trim());
+            int jawab = (int) (Math.random() * 10 + 1);
+        int count = 0;
+            count++;
+            if (angka == jawab) {
+                JOptionPane.showMessageDialog(null, "Kamu Menang!");
+                count = 0;
+            } else if (count == 3) {
+                JOptionPane.showMessageDialog(null, "Salah terus,jawaban yang bener tuh" + jawab);
+                count = 0;
+            } else {
+                JOptionPane.showMessageDialog(null, "Salah bro!");
+            }
+        }
+    }
+}           
